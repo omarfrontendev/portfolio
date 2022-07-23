@@ -1,0 +1,77 @@
+.services_container .services_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.services_container .services_cards .services_card {
+  border: 1px solid var(--color-primary-variant);
+  background-color: var(--color-bg-variant);
+  border-radius: 0 0 2rem 2rem;
+  transition: var(--transition);
+  position: relative;
+  height: fit-content;
+}
+.services_container .services_cards .services_card:hover {
+  background-color: transparent;
+  border-color: var(--color-bg-variant);
+}
+.services_container .services_cards .services_card h3 {
+  text-align: center;
+  z-index: 1;
+  background: var(--color-primary);
+  padding: 2rem 0;
+  border-radius: 0 0 2rem 2rem;
+  color: var(--color-bg-variant);
+  font-weight: 600;
+}
+.services_container .services_cards .services_card ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem;
+}
+.services_container .services_cards .services_card ul li {
+  display: flex;
+  column-gap: .8rem;
+}
+.services_container .services_cards .services_card ul li .service_icon {
+  font-size: 1.2rem;
+  color: var(--color-primary-variant);
+}
+/* Media Max-width: 1199px */
+@media(max-width: 1199px) {
+  .services_container .services_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .services_container .services_cards .services_card {
+    flex-basis: calc((100% - 2rem) / 2);
+  }
+  .services_container .services_cards .services_card:nth-child(2) {
+    order: 1;
+    flex: 1;
+  }
+  .services_container .services_cards .services_card:nth-child(2) ul li  {
+    justify-content: center;
+  }
+}
+/* Media Max-width: 991px */
+@media(max-width: 991px) {
+  .services_container .services_cards {
+    /* flex-direction: column;
+    width: 86%;
+    margin: 0 auto; */
+  }
+}
+@media(max-width: 767px) {
+  .services_container .services_cards {
+    flex-direction: column;
+    width: 86%;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .services_container .services_cards .services_card ul {
+    padding: 2rem 1.2rem;
+  }
+}

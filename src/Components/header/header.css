@@ -1,0 +1,111 @@
+header {
+  height: 100vh;
+  text-align: center;
+  padding-top: 7rem;
+  /* position: relative; */
+  overflow: hidden;
+}
+
+header .header_container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+}
+header .cta {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-content: center;
+  margin-top: 2rem;
+}
+
+header .header_social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -100px;
+  bottom: 4rem;
+  gap: .5rem;
+  opacity: 0;
+  animation: showheader .3s linear .5s forwards;
+}
+@keyframes showheader {
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+header .header_social::after {
+  content: '';
+  width: 1px;
+  height: 4rem;
+  background-color: var(--color-primary);
+} 
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  border-radius: 10rem 10rem 0 0;
+  width: 22rem;
+  padding: 5rem 1.5rem 1.5rem;
+  height: 30rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+header .scroll_down {
+  position: absolute;
+  bottom: 9rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: .9rem;
+  opacity: 0;
+  right: -100px;
+  animation: show .3s linear .5s forwards;
+}
+@keyframes show {
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+/* =========== Start Media MAx-width: 1399px ============== */
+@media(max-width: 1399px) {
+  header {
+    padding-top: 4rem;
+  }
+  header .header_container {
+    gap: 2rem;
+  }
+  header .cta {
+    margin-top: 1rem;
+  }
+  .me {
+    width: 20rem;
+  }
+}
+
+/* =========== Start Media MAx-width: 991px ============== */
+@media(max-width: 991px) { 
+  header {
+    height: 70vh;
+    padding-top: 6rem;
+  }
+  header .header_container {
+    /* gap: 4rem; */
+  }
+}
+
+
+/* =========== Start Media MAx-width: 767px ============== */
+@media(max-width: 767px) {
+  header .scroll_down, header .header_social {
+    display: none;
+  }
+  header {
+    height: 100vh;
+  }
+}

@@ -1,0 +1,73 @@
+.contact_container {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.contact_container .contact_options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact_container .contact_options-card {
+  text-align: center;
+  padding: 1.2rem;
+  border: 1px solid transparent;
+  background: var(--color-bg-variant);
+  border-radius: 2rem;
+  transition: var(--transition);
+}
+.contact_container .contact_options-card:hover {
+  background-color: transparent;
+  border-color: var(--color-bg-variant);
+}
+.contact_container .contact_options-card svg {
+  font-size: 1.5rem;
+  /* margin-bottom: .5rem; */
+}
+.contact_container .contact_options-card small {
+  color: var(--color-light);
+}
+.contact_container .contact_options-card a {
+  display: block;
+  font-size: 1rem;
+}
+.contact_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact_container form  .input_control {
+  width: 100%;
+  position: relative;
+}
+.contact_container form  .input_control:nth-child(3) {
+  height: 100%;
+}
+.contact_container form textarea,
+.contact_container form input {
+  height: 90px;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: 2px solid var(--color-bg-variant);
+  color: var(--color-white);
+  transition: var(--transition);
+  width: 100%;
+}
+.contact_container form textarea {
+  height: 100%;
+  padding: 2rem;
+  resize: none;
+}
+.contact_container form input.valid,
+.contact_container form input:focus {
+  border-color: var(--color-light);
+  background-color: #2c2c6c36;
+}
+.contact_container form input.invalid {
+  border-color: #f15555;
+  background-color: #e5363629;
+}

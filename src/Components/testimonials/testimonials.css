@@ -1,0 +1,26 @@
+.testimonials_container {
+  padding-bottom: 4rem;
+  width: 50% !important;
+}
+.testimonial_slide {
+  background: var(--color-bg-variant);
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+.testimonial_slide img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: .4rem solid var(--color-primary);
+}
+.testimonial_slide small {
+  width: 600px;
+  max-width: 100%;
+  color: var(--color-light);
+  text-align: center;
+}

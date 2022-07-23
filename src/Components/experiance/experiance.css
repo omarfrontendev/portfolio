@@ -1,0 +1,76 @@
+.experiance_container .experiance_cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.experiance_container .experiance_cards .experiance_card {
+  flex-basis: 50%;
+  padding: 3rem 5rem;
+  border: 1px solid var(--color-bg-variant);
+  border-radius: 2rem;
+  transition: var(--transition);
+  background-color: var(--color-bg-variant);
+}
+.experiance_container .experiance_cards .experiance_card:hover {
+  background-color:transparent;
+}
+.experiance_container .experiance_cards .experiance_card h3 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+.experiance_container .experiance_cards .experiance_card .experiance_card-skills {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.experiance_container .experiance_cards .experiance_card .experiance_card-skills > div {
+  flex-basis: calc((100% - 1.5rem) / 2);
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 1.2rem;
+}
+.experiance_card .experiance_card-skills > div p {
+  color: var(--color-light);
+  margin-top: 0.3rem;
+}
+.experiance_cards .experiance_card .experiance_card-skills > div .experiance_icon {
+  color: var(--color-primary);
+  transform: translateY(6px);
+}
+/* Media Max-width: 1399px */
+@media (max-width: 1399px) {
+  .experiance_container .experiance_cards .experiance_card {
+    padding: 2rem 4rem;
+  }
+}
+/* Media Max-width: 1199px */
+@media (max-width: 1199px) {
+  .experiance_container .experiance_cards .experiance_card {
+    padding: 1.5rem 2.5rem;
+  }
+}
+/* Media Max-width: 991px */
+@media (max-width: 991px) {
+  .experiance_container .experiance_cards .experiance_card {
+    padding: 1.25rem;
+  }
+  .experiance_container .experiance_cards .experiance_card .experiance_card-skills {
+    gap: .5rem;
+  }
+  .experiance_container .experiance_cards .experiance_card .experiance_card-skills > div {
+    flex-basis: calc((100% - .5rem) / 2);
+    column-gap: .5rem;
+  }
+}
+/* Media Max-width: 767px */
+@media (max-width: 767px) {
+  .experiance_container .experiance_cards {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .experiance_container .experiance_cards .experiance_card {
+    /* padding: 2rem 4rem; */
+  }
+}

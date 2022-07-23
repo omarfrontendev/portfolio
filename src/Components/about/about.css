@@ -1,0 +1,94 @@
+.about_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about_container .about_me-image {
+  flex-basis: 35%;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+  cursor: pointer;
+}
+.about_container .about_me-image .about_image img {
+  border-radius: 2rem;
+  transform: rotate(10deg);
+  transition: var(--transition);
+}
+.about_container .about_me-image .about_image img:hover {
+  transform: rotate(0);
+}
+.about_container .about_me-content {
+  flex-basis: 50%;
+}
+.about_container .about_me-content .about_me-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.about_container .about_me-content .about_me-cards .about_me-card {
+  background-color: var(--color-bg-variant);
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+.about_container .about_me-content .about_me-cards .about_me-card:hover {
+  background-color: transparent;
+  border-color: var(--color-bg-variant);
+}
+.about_me-content .about_me-cards .about_me-card .about_icon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.about_me-cards .about_me-card h5 {
+  font-size: .9rem;
+}
+.about_me-cards .about_me-card small {
+  font-size: .7rem;
+  color: var(--color-light);
+}
+.about_me-content p {
+  margin: 2rem 0 2.5rem;
+  color: var(--color-light);
+}
+
+/* Start Media MAx-width: 1399px */
+@media(max-width: 1399px) {
+  .about_container .about_me-content .about_me-cards .about_me-card {
+    padding: 2rem 1rem;
+  }
+}
+/* Start Media MAx-width: 991 */
+@media(max-width: 991px) {
+  .about_container {
+    flex-direction: column;
+  }
+  .about_container .about_me-image {
+    width: 50%;
+    margin-bottom: 4rem;
+  }
+}
+/* Start Media MAx-width: 600px */
+@media(max-width: 600px) {
+  .about_container .about_me-image {
+    width: 65%;
+    margin: 2rem 0 4rem;
+  }
+}
+/* Start Media MAx-width: 475px */
+@media(max-width: 475px) {
+  .about_container .about_me-content .about_me-cards {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .about_container .about_me-content .about_me-cards .about_me-card {
+    flex-basis: calc((100% - 1rem) / 2);
+  }
+  .about_container .about_me-image {
+    width: 80%;
+  }
+}
